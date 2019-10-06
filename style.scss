@@ -213,3 +213,9 @@ button {
     color: #FFFFFF;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .header-wrapper {
+    max-width: 340px;
+  }
+}
