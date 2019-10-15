@@ -828,6 +828,15 @@ button {
   height: 1018px;
   display: flex;
 
+  .mobile-block {
+    display: none;
+
+    &__image {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
   &__wrapper {
     width: 100%;
     display: flex;
@@ -1200,14 +1209,12 @@ button {
 
   .form {
     width: 884px;
-    height: 446px;
+    height: fit-content;
     margin-top: 0;
     background-color: $color-dark;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-
-
 
     &__heading {
       margin-top: 34px;
@@ -1256,6 +1263,10 @@ button {
       &__label {
         color: #ffffff;
       }
+    }
+
+    .submit-block {
+      margin-bottom: 40px;
     }
   }
 }
@@ -1394,7 +1405,23 @@ button {
   }
 
   .projects {
-    height: 1550px;
+    height: 1400px;
+
+    &__wrapper {
+      padding-top: 30px;
+    }
+
+    .slider-photos {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .text-section__online-control {
+    margin-top: -250px;
   }
 
   .projects__wrapper {
@@ -1456,6 +1483,13 @@ button {
     }
   }
 
+  .projects {
+    &__wrapper {
+      padding-right: 18px;
+      padding-left: 18px;
+    }
+  }
+
   .intro__wrapper {
     padding: 0;
 
@@ -1466,10 +1500,10 @@ button {
     box-sizing: border-box;
     padding-left: 18px;
     padding-right: 18px;
+
     &__intro-content {
       width: 100%;
       margin-left: 0;
-
     }
   }
 
@@ -1532,8 +1566,43 @@ button {
     width: 100%;
   }
 
+  .styles {
+    background-color: transparent;
+
+    &__wrapper {
+      background-image: none;
+      background-color: transparent
+    }
+    .text-container,
+    .img-container {
+      display: none;
+    }
+  }
+
+  .styles {
+    height: 300px;
+    margin-bottom: 190px;
+
+    .mobile-block {
+      width: 100%;
+      position: relative;
+      display: block;
+      height: auto;
+
+      &__image {
+        width: 100%;
+        height: auto;
+      }
+
+      .slider-photos-carousel__prev {
+        display: flex;
+      }
+    }
+
+  }
+
   .text-section__design {
-    height: 2375px;
+    height: 2250px;
   }
 
   .text-section__team {
@@ -1550,6 +1619,14 @@ button {
 }
 
 @media screen and (max-width: 800px) {
+  .scroll-down-block {
+    display: none;
+  }
+
+  .text-section__form {
+    width: 100%;
+  }
+
   .contact-us {
     width: fit-content;
 
@@ -1612,13 +1689,8 @@ button {
     display: none;
   }
 
-  .styles {
-    background-color: $color-dark;
-  }
-
   .text-section__design {
     height: 2650px;
-    background-color: $color-dark;
   }
 
   .text-section__design {
@@ -1634,9 +1706,124 @@ button {
 
   .text-section__team {
     background-color: $color-dark;
+    margin-bottom: 20px;
 
     .text-section__paragraph {
       color: #ffffff;
+    }
+  }
+
+  .questions {
+    .form {
+      padding-right: 18px;
+      padding-left: 18px;
+
+      .input-block  {
+        width: 100%;
+      }
+
+      .input-inline {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+
+        .input-block  {
+          width: 100%;
+          margin-bottom: 62px;
+        }
+      }
+    }
+  }
+}
+
+  .map {
+    margin-top: 50px;
+
+    &__wrapper {
+      background-image: none;
+    }
+
+    &__heading,
+    .social {
+      display: none;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+  .text-section__team {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .text-section__design {
+    margin-top: -200px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    height: 56px;
+  }
+
+  .logo__name,
+  .contact-us__number {
+    font-size: 12px;
+  }
+
+  .intro {
+    height: fit-content;
+  }
+
+  .intro-content {
+    margin-top: 84px;
+  }
+
+  .intro-content {
+    &__heading {
+      width: 90%;
+      align-self: flex-start;
+      font-size: 23px;
+      line-height: 132.83%;
+    }
+
+    &__paragraph {
+      font-size: 18px;
+    }
+  }
+
+  .intro-content__button-submit {
+    margin-bottom: 60px;
+  }
+
+  .projects__wrapper {
+    align-items: center;
+  }
+
+  .projects-text-block {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    height: fit-content;
+
+    .heading-block {
+      justify-content: center;
+
+      &__heading {
+        font-size: 22px;
+        text-align: center;
+      }
+      &__hr {
+        display: none;
+      }
+    }
+
+    &__paragraph {
+      margin-top: 30px;
+      font-size: 14px;
+      text-align: center;
     }
   }
 }
