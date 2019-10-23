@@ -26,7 +26,7 @@
       </ul>
     </nav>
     <div class="contact-us">
-      <span class="contact-us__number">+7 (928) 768-32-39</span>
+      <a href="tel:7-928-768-32-39" class="contact-us__number">+7 (928) 768-32-39</a>
       <button class="button contact-us__button">Request a call</button>
     </div>
   </div>
@@ -36,7 +36,7 @@
     <div class="wrapper intro__wrapper">
       <aside class="intro-aside">
         <div class="instagram">
-          <span class="instagram__text">INSTAGRAM</span>
+          <a href="#" class="instagram__text">INSTAGRAM</a>
           <div class="instagram__hr"></div>
         </div>
       </aside>
@@ -77,15 +77,15 @@
           </div>
           <div class="features__item">
             <h3 class="features__name">Repair Cost:</h3>
-            <p class="features__description">Upon request</p>
+            <p class="features__description">Upon `est</p>
           </div>
         </div>
         <div class="slider-controls">
-          <img src="" alt="" class="slider-controls__left">
+          <img src="assets/img/slider-controls-arrow-left.svg" alt="" class="slider-controls__left">
+          <div class="slider-controls__circle slider-controls__circle_active"></div>
           <div class="slider-controls__circle"></div>
           <div class="slider-controls__circle"></div>
-          <div class="slider-controls__circle"></div>
-          <img src="" alt="" class="slider-controls__right">
+          <img src="assets/img/slider-controls-arrow-right.svg" alt="" class="slider-controls__right">
         </div>
       </div>
       <div class="slider-photos">
@@ -95,8 +95,8 @@
           <h4 class="slider-headings__item">Rostov-on-Don Patriotic</h4>
         </div>
         <div class="slider-photos-carousel">
-          <img class="slider-photos-carousel__item" src="assets/img/slider-photo-carousel-1.png" href=""></img>
-          <img class="slider-photos-carousel__item" src="assets/img/slider-photo-carousel-2.png" href=""></img>
+          <img class="slider-photos-carousel__item" src="assets/img/slider-photo-carousel-1.png" alt="">
+          <img class="slider-photos-carousel__item" src="assets/img/slider-photo-carousel-2.png" alt="">
           <div class="slider-photos-carousel__prev"><img src="assets/img/arrow.svg" alt="" class="slider-photos-carousel__arrow"></div>
           <div class="slider-photos-carousel__next"><img src="assets/img/arrow.svg" alt="" class="slider-photos-carousel__arrow"></div>
         </div>
@@ -125,25 +125,25 @@
     <div class="wrapper online-control__wrapper">
       <h2 class="text-section__heading">online control</h2>
       <img src="assets/img/camera-icon.svg" alt="" class="text-section__image">
-      <div class="text-section__video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Gi5pCRt2Ns4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="text-section-video">
+        <iframe src="https://www.youtube.com/embed/Gi5pCRt2Ns4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="text-section__hr"></div>
       <p class="text-section__paragraph">At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities! Leave a request below and you will receive a link to the broadcast.</p>
       <form action="#" class="form text-section__form">
         <div class="input-block">
-          <label class="input-block__label" for="name">Name</label>
-          <input class="input-block__input" type="text" name="name" placeholder="What is your name:">
+          <label class="input-block__label" for="name2">Name</label>
+          <input class="input-block__input" type="text" name="name" id="name2" placeholder="What is your name:" required pattern="[A-Za-z]{1,40}">
         </div>
         <div class="input-block">
-          <label class="input-block__label" for="phone">Phone</label>
-          <input class="input-block__input" type="phone" name="phone" placeholder="Your phone number:">
+          <label class="input-block__label" for="phone2">Phone</label>
+          <input class="input-block__input" type="tel" name="phone" id="phone2" placeholder="Your phone number:" required pattern="[0-9]{3} [0-9]{3} [0-9]{4}">
         </div>
         <div class="submit-block">
           <input class="submit-block__submit" type="submit" value="Submit">
         </div>
         <div class="checkbox-block">
-          <input class="checkbox-block__checkbox" type="checkbox" name="agree" checked><label class="checkbox-block__label" for="agree">I agree to the processing of personal data</label>
+          <input class="checkbox-block__checkbox" type="checkbox" name="checkbox" id="checkbox2" required><label class="checkbox-block__label" for="checkbox2">I agree to the processing of personal data</label>
         </div>
       </form>
     </div>
@@ -224,24 +224,24 @@
           <p class="item__text">Get a cost estimate and the timing of your future repairs</p>
         </div>
       </div>
-      <form action="" class="form flow__form">
+
+      <form action="#" class="form flow__form">
         <h4 class="form__heading">Leave a request for free departure of the measurer</h4>
         <div class="input-block">
-          <lable class="input-block__label" for="name">Name</lable>
-          <input class="input-block__input" type="text" name="name" placeholder="What is your name:">
+          <label class="input-block__label" for="name3">Name</label>
+          <input class="input-block__input" type="text" name="name" id="name3" placeholder="What is your name:" required pattern="[A-Za-z]{1,40}">
         </div>
         <div class="input-block">
-          <label class="input-block__label" for="phone">Phone</label>
-          <input class="input-block__input" type="phone" name="phone" placeholder="Your phone number:">
+          <label class="input-block__label" for="phone3">Phone</label>
+          <input class="input-block__input" type="tel" name="phone" id="phone3" placeholder="Your phone number:" required pattern="[0-9]{3} [0-9]{3} [0-9]{4}">
         </div>
         <div class="input-block">
-          <label class="input-block__label" for="">Email</label>
-          <input class="input-block__input" type="email" name="email" placeholder="Your email:">
+          <label class="input-block__label" for="email3">Email</label>
+          <input class="input-block__input" type="email" name="email" id="email3" placeholder="Your email:" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
         </div>
         <div class="checkbox-block">
-            <!-- https://www.w3schools.com/howto/howto_css_custom_checkbox.asp -->
-          <input class="checkbox-block__checkbox" type="checkbox">
-          <label class="checkbox-block__label" for="">I agree to the processing of personal data</label>
+          <input class="checkbox-block__checkbox" type="checkbox" name="checkbox" id="checkbox3" required>
+          <label class="checkbox-block__label" for="checkbox3">I agree to the processing of personal data</label>
         </div>
         <div class="submit-block">
           <input class="submit-block__submit" type="submit" value="Call the measurer">
@@ -362,7 +362,14 @@
           <p class="slider-text__paragraph">After your call, we go to you to consult and measure the premises of your apartment. During our meeting, you can ask absolutely any number of questions. An appraiser-appraiser leaves to measure the room</p>
           <p class="slider-text__paragraph">He will advise you on the issues of repair technology, apartment design, terms of repair of the apartment as a whole and its individual stages.</p>
           <div class="slider-controls">
-            <!-- ! add controls -->
+            <img src="assets/img/slider-controls-arrow-left.svg" alt="" class="slider-controls__left">
+            <div class="slider-controls__circle slider-controls__circle_active"></div>
+            <div class="slider-controls__circle"></div>
+            <div class="slider-controls__circle"></div>
+            <div class="slider-controls__circle"></div>
+            <div class="slider-controls__circle"></div>
+            <div class="slider-controls__circle"></div>
+            <img src="assets/img/slider-controls-arrow-right.svg" alt="" class="slider-controls__right">
           </div>
         </div>
       </div>
@@ -431,9 +438,8 @@
         </div>
         <div class="card">
           <div class="icon-block">
-            <img src="assets/img/team-1-icon.svg" alt="" class="card__icon">
+            <img src="assets/img/team-3-icon.svg" alt="" class="card__icon">
           </div>
-          <img src="" alt="" class="card__icon">
           <img src="assets/img/team-3.png" alt="" class="card__image">
           <div class="text-container">
             <h4 class="text-container__heading">Alexey Efimov</h4>
@@ -443,8 +449,8 @@
         </div>
       </div>
       <div class="text-section__hr"></div>
-      <p class="text-section__paragraph">Each employee of our company is a qualified full-time specialist with work experience of 6 years.</br>
-      We do not have laborers and guest workers, each employee carries out work corresponding to his specialty.</p>
+      <p class="text-section__paragraph">Each employee of our company is a qualified full-time specialist with work experience of 6 years.</p>
+      <p class="text-section__paragraph">We do not have laborers and guest workers, each employee carries out work corresponding to his specialty.</p>
     </div>
   </section>
   <section class="text-section text-section__clients">
@@ -514,26 +520,25 @@
     </div>
   </section>
   <section class="questions">
-    <form action="" class="form">
+    <form action="#" class="form">
         <h4 class="form__heading">have any questions?</h4>
         <div class="input-inline">
           <div class="input-block">
-            <lable class="input-block__label" for="name">Name</lable>
-            <input class="input-block__input" type="text" name="name" placeholder="What is your name:">
+            <label class="input-block__label" for="name1">Name</label>
+            <input class="input-block__input" type="text" name="name" placeholder="What is your name:" required pattern="[A-Za-z]{1,40}" id="name1">
           </div>
           <div class="input-block">
-            <label class="input-block__label" for="phone">Phone</label>
-            <input class="input-block__input" type="phone" name="phone" placeholder="Your phone number:">
+            <label class="input-block__label" for="phone1">Phone</label>
+            <input class="input-block__input" type="tel" name="phone" id="phone1" placeholder="Your phone number:" required pattern="[0-9]{3} [0-9]{3} [0-9]{4}">
           </div>
         </div>
         <div class="input-block">
-            <label class="input-block__label" for="know">Question</label>
-            <input class="input-block__input" type="know" name="text" placeholder="I want to know:">
+            <label class="input-block__label" for="know1">Question</label>
+            <input class="input-block__input" type="text" name="know" id="know1" placeholder="I want to know:" required>
           </div>
         <div class="checkbox-block">
-            <!-- https://www.w3schools.com/howto/howto_css_custom_checkbox.asp -->
-          <input class="checkbox-block__checkbox" type="checkbox">
-          <label class="checkbox-block__label" for="">I agree to the processing of personal data</label>
+          <input class="checkbox-block__checkbox" type="checkbox" name="checkbox" id="checkbox1" required>
+          <label class="checkbox-block__label" for="checkbox1">I agree to the processing of personal data</label>
         </div>
         <div class="submit-block">
           <input class="submit-block__submit" type="submit" value="Call the measurer">
@@ -552,30 +557,30 @@
           <img src="assets/img/instagram-icon.svg" alt="" class="social-item__image">
         </div>
       </div>
-      <img src="assets/img/map.png" class="map__image" width="925" height="465">
+      <img src="assets/img/map.png" class="map__image" width="925" height="465" alt="">
     </div>
   </section>
 </main>
-<header class="footer">
-    <div class="wrapper footer__wrapper">
-      <div class="logo">
-        <h1 class="logo__name">IC "Repair Design Project"</h1>
-      </div>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav__item"><a class="nav__link" href="#">HOME</a></li>
-          <li class="nav__item"><a class="nav__link" href="http://google.com">PROJECTS</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">MEASUREMENT</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">TEAMS</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">REVIEWES</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">CONTACTS</a></li>
-        </ul>
-      </nav>
-      <div class="contact-us">
-        <span class="contact-us__number">+7 (928) 768-32-39</span>
-        <button class="button contact-us__button">Request a call</button>
-      </div>
+<footer class="footer">
+  <div class="wrapper footer__wrapper">
+    <div class="logo">
+      <h1 class="logo__name">IC "Repair Design Project"</h1>
     </div>
-  </header>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav__item"><a class="nav__link" href="#">HOME</a></li>
+        <li class="nav__item"><a class="nav__link" href="http://google.com">PROJECTS</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">MEASUREMENT</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">TEAMS</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">REVIEWES</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">CONTACTS</a></li>
+      </ul>
+    </nav>
+    <div class="contact-us">
+      <a href="tel:7-928-768-32-39" class="contact-us__number">+7 (928) 768-32-39</a>
+      <button class="button contact-us__button">Request a call</button>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

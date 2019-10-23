@@ -75,6 +75,11 @@ section {
     line-height: 18px;
     color: #ffffff;
     text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__link:hover {
+    color: $color-accent;
   }
 }
 
@@ -96,6 +101,7 @@ section {
   &__button {
     width: 161px;
     height: 37px;
+    cursor: pointer;
   }
 }
 
@@ -125,11 +131,16 @@ section {
       transform: rotate(90deg);
 
       &__text {
+        text-decoration: none;
         height: 16px;
         font-family: $font-main;
         color: $color-accent;
         font-size: 14px;
         line-height: 16px;
+      }
+
+      &__text:hover {
+        color: #ffffff;
       }
 
       &__hr {
@@ -155,7 +166,7 @@ section {
 }
 
 .intro-content {
-  width: 100%;
+  width: 80%;
   height: fit-content;
 
   &__heading {
@@ -196,6 +207,7 @@ button {
   text-transform: uppercase;
   border: none;
   color: #ffffff;
+  outline: none;
 }
 
 .intro-content__button-calculate {
@@ -203,6 +215,7 @@ button {
   margin-bottom: 36px;
   width: 207px;
   height: 51px;
+  cursor: pointer;
 }
 
 .intro-content__button-submit {
@@ -211,6 +224,7 @@ button {
   height: 51px;
   background: none;
   border: 1px solid #ffffff;
+  cursor: pointer;
 }
 
 .scroll-down-block {
@@ -223,6 +237,7 @@ button {
   width: 247px;
   height: 97px;
   background: $color-dark;
+  cursor: pointer;
 
   &__text {
     margin-right: 18px;
@@ -329,7 +344,38 @@ button {
   }
 }
 
-/*!!! add controls */
+.slider-controls {
+  margin-top: 88px;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__circle {
+    margin-left: 16px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    opacity: 0.3;
+    cursor: pointer;
+
+    &_active {
+      opacity: 1;
+    }
+  }
+
+  &__right {
+    margin-left: 30px;
+    cursor: pointer;
+  }
+
+  &__left {
+    margin-right: 14px;
+    cursor: pointer;
+  }
+}
+
 .slider-photos {
   width: 64.25%;
 }
@@ -345,7 +391,7 @@ button {
     font-size: 14px;
     line-height: 19px;
     text-transform: uppercase;
-
+    cursor: pointer;
     color: rgba(255, 255, 255, 0.3);
 
     &_selected {
@@ -380,6 +426,7 @@ button {
     border-radius: 50%;
     background: $color-accent;
     box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+    cursor: pointer;
   }
 
   &__next {
@@ -395,6 +442,7 @@ button {
     border-radius: 50%;
     background: $color-accent;
     box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+    cursor: pointer;
   }
 }
 
@@ -422,8 +470,16 @@ button {
 
   }
 
-  &__video {
+  &-video {
+    width: 100%;
+    max-width: 818px;
+    height: 434px;
     margin-bottom: 50px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__hr {
@@ -498,7 +554,7 @@ button {
       font-family: "FuturaBookC";
       font-size: 18px;
       line-height: 24px;
-      background-color: none;
+      background-color: transparent;
     }
 
     &__input::placeholder {
@@ -520,6 +576,8 @@ button {
       text-transform: uppercase;
       color: #FFFFFF;
       background-color: $color-accent;
+      cursor: pointer;
+      outline: none;
     }
   }
 
@@ -540,12 +598,25 @@ button {
     }
 
     &__checkbox {
-      appearance: none;
+      position: relative;
+      appearance: initial;
       height: 18px;
       width: 18px;
       border: none;
       background-color: $color-accent;
       border-radius: 1px;
+      cursor: pointer;
+      outline: none;
+    }
+
+
+    &__checkbox:checked:after {
+      content: url('assets/img/tick-mark.svg');
+      color: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
     }
   }
 }
@@ -760,12 +831,17 @@ button {
       }
 
       &__input {
+        color: #FFFFFF;
         background-color: $color-dark;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       }
 
       &__input::placeholder {
         color: #ffffff;
+      }
+
+      &__input:focus {
+        color: #FFFFFF;
       }
     }
 
@@ -1052,6 +1128,7 @@ button {
       height: 178px;
 
       .point {
+        cursor: pointer;
 
         &_selected {
           opacity: 1;
@@ -1094,6 +1171,10 @@ button {
 .text-section__team {
   height: 970px;
   margin-top: -420px;
+
+  .text-section__paragraph:not(:last-child) {
+    margin-bottom: 0;
+  }
 
   .text-section__paragraph {
     width: 460px;
@@ -1248,12 +1329,17 @@ button {
       }
 
       &__input {
+        color: #FFFFFF;
         background-color: transparent;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       }
 
       &__input::placeholder {
         color: #ffffff;
+      }
+
+      &__input:focus {
+        color: #FFFFFF;
       }
     }
 
@@ -1314,6 +1400,7 @@ button {
       height: 28px;
       border-radius: 50%;
       background-color: $color-accent;
+      cursor: pointer;
     }
   }
 
@@ -1436,6 +1523,10 @@ button {
       display: none;
     }
 
+    .slider-photos {
+      height: fit-content;
+    }
+
     .slider-photos-carousel {
       width: fit-content;
       height: auto;
@@ -1467,6 +1558,9 @@ button {
 }
 
 @media screen and (max-width: 866px) {
+  .text-section-video {
+    height: 350px;
+  }
   .intro-content {
     display: flex;
     flex-direction: column;
@@ -1619,6 +1713,10 @@ button {
 }
 
 @media screen and (max-width: 800px) {
+  .text-section-video {
+    height: 300px;
+  }
+
   .scroll-down-block {
     display: none;
   }
@@ -1717,6 +1815,7 @@ button {
     .form {
       padding-right: 18px;
       padding-left: 18px;
+      margin-bottom: 110px;
 
       .input-block  {
         width: 100%;
@@ -1737,20 +1836,11 @@ button {
   }
 }
 
-  .map {
-    margin-top: 50px;
-
-    &__wrapper {
-      background-image: none;
-    }
-
-    &__heading,
-    .social {
-      display: none;
-    }
+@media screen and (max-width: 600px) {
+  .text-section-video {
+    height: 200px;
   }
 
-@media screen and (max-width: 600px) {
   .text-section__team {
     padding-top: 20px;
     margin-bottom: 20px;
@@ -1758,6 +1848,16 @@ button {
 
   .text-section__design {
     margin-top: -200px;
+  }
+
+  .form {
+    .submit-block {
+      width: 100%;
+    }
+  }
+
+  .map__wrapper {
+    background-image: none;
   }
 }
 
@@ -1806,13 +1906,14 @@ button {
     flex-direction: column;
     align-items: center;
     margin-right: 0;
-    height: fit-content;
+    height: 210px;
 
     .heading-block {
       justify-content: center;
 
       &__heading {
         font-size: 22px;
+        line-height: 40px;
         text-align: center;
       }
       &__hr {
@@ -1824,6 +1925,155 @@ button {
       margin-top: 30px;
       font-size: 14px;
       text-align: center;
+      width: 90%;
     }
+  }
+
+  .slider-photos {
+    height: fit-content;
+  }
+
+  .text-section__online-control {
+    margin-top: -1px;
+  }
+
+  .slider-photos-carousel {
+    &__next,
+    &__prev {
+      margin-bottom: -18px;
+      width: 36px;
+      height: 36px;
+      box-shadow: none;
+    }
+
+    &__arrow {
+      width: 7px;
+      height: 11px;
+    }
+  }
+
+  .features {
+    &__name {
+      font-size: 14px;
+      line-height: 138.6%;
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 135.84%;
+    }
+  }
+
+  .text-section {
+    .wrapper {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    &__paragraph {
+      max-width: 300px;
+      font-size: 14px;
+      line-height: 169.8%;
+    }
+  }
+
+  .styles {
+    &__wrapper {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+
+  .text-container {
+    &__heading {
+      display: block;
+    }
+  }
+
+  .text-section {
+    &__design {
+      padding-top: 100px;
+      margin-top: -366px;
+    }
+
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .questions {
+    .form {
+      margin-bottom: 0;
+    }
+  }
+
+  .map {
+    &__wrapper {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    &__image {
+      margin-top: 20px;
+      order: 1;
+    }
+
+    &__heading {
+      order: 2;
+    }
+
+    .social {
+      order: 3;
+    }
+  }
+
+  .cards-container {
+    .card {
+      width: 100%;
+      min-width: 0;
+
+      &__image {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .text-section__team {
+    .cards-container {
+      .card {
+        width: auto;
+      }
+    }
+  }
+
+  .features:last-child {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .contact-us {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .text-section__design {
+    height: 2520px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .text-section__design {
+    height: 2480px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .text-section__design {
+    height: 2440px;
   }
 }
